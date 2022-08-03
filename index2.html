@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronostico del clima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="search">
+            <input type="text" id="input">
+            <button>busqueda</button>
+        </div>
+        <div id="main">
+
+        </div>
+
+    </div>
+<script>
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
+const container = document.querySelector("#main")
+
+btn.addEventListener("click", () => {
+/*     if(input.value){alert(input.value)}; */
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input.value}&uints=metrics&appid=a6eb8c2cd814ef3c0470ba9e51e2548b`)
+    .then((response) => response.json())//{
+    .then((data) => console.log(data))})
+
+/*         return response.json()
+    })}) */
+
+</script>
+</body>
+
+</html>
